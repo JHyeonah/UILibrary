@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Material"
+            android:id="@+id/materialBtn"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/materialBtn"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Bootstrap"
+            android:id="@+id/bootstrapBtn"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bootstrapBtn"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Date Range Picker"
+            android:id="@+id/datePickerBtn"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/datePickerBtn"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Expandable Layout"
+            android:id="@+id/expandableBtn"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expandableBtn"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Circle Indicator"
+            android:id="@+id/indicatorBtn"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/indicatorBtn"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Smart Tab Layout"
+            android:id="@+id/smartTabBtn"/>
+    </RelativeLayout>
+</layout>

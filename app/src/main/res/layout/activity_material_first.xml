@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/national"
+                android:textColor="#000000"
+                android:id="@+id/nationText"/>
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="선택.."
+                android:layout_below="@+id/nationText"
+                android:textColorHint="#05ab9a"
+                android:layout_marginTop="5dp"
+                android:id="@+id/nationSpinner"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/howto_send"
+                android:textColor="#000000"
+                android:id="@+id/howtoSendText"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/nationSpinner"/>
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/howtoSendText"
+                android:textColorHint="#05ab9a"
+                android:layout_marginTop="5dp"
+                android:id="@+id/howtoSpinner"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bank"
+                android:textColor="#000000"
+                android:id="@+id/bankText"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/howtoSpinner"/>
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bankText"
+                android:textColorHint="#05ab9a"
+                android:layout_marginTop="5dp"
+                android:id="@+id/bankSpinner"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account"
+                android:textColor="#000000"
+                android:id="@+id/accountText"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/bankSpinner"/>
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/accountText"
+                android:inputType="number"
+                android:layout_marginTop="10dp"
+                android:hint="@string/account"
+                android:id="@+id/accountEt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="#000000"
+                android:id="@+id/nameText"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/accountEt"/>
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameText"
+                android:layout_marginTop="10dp"
+                android:hint="영문 성명"
+                android:id="@+id/nameEt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:textColor="#000000"
+                android:id="@+id/numberText"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/nameEt"/>
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/numberText"
+                android:layout_marginTop="10dp"
+                android:hint="@string/phone_number"
+                android:inputType="number"
+                android:id="@+id/numberEt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textColor="#000000"
+                android:id="@+id/emailText"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/numberEt"/>
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailText"
+                android:layout_marginTop="10dp"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email"
+                android:id="@+id/emailEt"/>
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/okBtn"
+                android:layout_below="@+id/emailEt"
+                android:layout_marginTop="30dp"
+                android:text="@string/ok"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorPrimary"/>
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancelBtn"
+                android:layout_below="@+id/emailEt"
+                android:layout_marginTop="30dp"
+                android:text="@string/cancel"
+                android:layout_alignParentLeft="true"
+                android:background="@color/colorCancel"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</layout>
