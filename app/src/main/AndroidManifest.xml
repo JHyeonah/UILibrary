@@ -21,7 +21,10 @@
         <activity android:name=".ExpandableActivity"/>
         <activity android:name=".DatePickerActivity"/>
         <activity android:name=".MaterialFirstActivity"/>
-        <activity android:name=".MaterialSecondActivity"/>
+        <activity android:name=".MaterialSecondActivity">
+
+        </activity>
+        <activity android:name=".MaterialThirdActivity"/>
     </application>
 
 </manifest>

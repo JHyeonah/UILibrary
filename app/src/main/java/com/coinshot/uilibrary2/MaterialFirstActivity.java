@@ -1,6 +1,7 @@
 package com.coinshot.uilibrary2;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -24,11 +25,11 @@ public class MaterialFirstActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_material_first);
 
         Resources res = getResources();
-        String[] spinnerNation = res.getStringArray(R.array.spinner_nation);
+        final String[] spinnerNation = res.getStringArray(R.array.spinner_nation);
         String[] spinnerHowto = res.getStringArray(R.array.spinner_howto);
         String[] spinnerBank = res.getStringArray(R.array.spinner_bank);
 
-        ArrayAdapter<String> nationAdapter = new ArrayAdapter<String>(this,
+        final ArrayAdapter<String> nationAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, spinnerNation);
 
         ArrayAdapter<String> howtoAdapter = new ArrayAdapter<String>(this,
@@ -58,6 +59,19 @@ public class MaterialFirstActivity extends AppCompatActivity {
                         binding.howtoSpinner.getText().toString().length() == 0 || binding.bankSpinner.getText().toString().length() == 0 ){
                     Toast.makeText(getApplicationContext(), "항목들을 알맞게 입력해주세요." , Toast.LENGTH_SHORT).show();
                 }else {
+                    SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("nation", binding.nationSpinner.getText().toString());
+                    editor.putString("howto", binding.howtoSpinner.getText().toString());
+                    editor.putString("bank", binding.bankSpinner.getText().toString());
+                    editor.putString("account", binding.accountEt.getText().toString());
+                    editor.putString("name", binding.nameEt.getText().toString());
+                    editor.putString("phone", binding.numberEt.getText().toString());
+                    if(binding.emailEt.getText().toString().length() != 0){
+                        editor.putString("email", binding.emailEt.getText().toString());
+                    }
+                    editor.apply();
+
                     Intent intent = new Intent(getApplicationContext(), MaterialSecondActivity.class);
                     startActivity(intent);
                 }

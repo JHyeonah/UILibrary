@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/national"
+            android:id="@+id/nationTitleText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/accountText"
+            android:layout_alignLeft="@+id/accountText"
+            android:layout_toRightOf="@+id/nationTitleText"
+
+            android:text="국가"
+            android:textStyle="bold"
+            android:id="@+id/nationText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bank"
+            android:id="@+id/bankTitleText"
+            android:layout_below="@+id/nationTitleText"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/bankTitleText"
+            android:layout_alignBaseline="@+id/bankTitleText"
+            android:layout_alignStart="@+id/accountText"
+            android:layout_alignLeft="@+id/accountText"
+            android:text="은행"
+            android:textStyle="bold"
+            android:id="@+id/bankText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account"
+            android:id="@+id/accountTitleText"
+            android:layout_below="@+id/bankTitleText"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/sendText"
+            android:layout_alignLeft="@+id/sendText"
+            android:layout_alignBaseline="@+id/accountTitleText"
+            android:text="계좌번호"
+            android:textStyle="bold"
+            android:id="@+id/accountText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:id="@+id/nameTitleText"
+            android:layout_below="@+id/accountTitleText"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/nameTitleText"
+            android:layout_alignBaseline="@+id/nameTitleText"
+            android:layout_alignStart="@+id/sendText"
+            android:layout_alignLeft="@+id/sendText"
+            android:text="이름"
+            android:textStyle="bold"
+            android:id="@+id/nameText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_money"
+            android:id="@+id/sendTitleText"
+            android:layout_below="@+id/nameTitleText"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sendTitleText"
+            android:layout_alignBaseline="@+id/sendTitleText"
+            android:layout_marginLeft="20dp"
+            android:text="보내는 금액"
+            android:textStyle="bold"
+            android:id="@+id/sendText"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receive_money"
+            android:id="@+id/receiveTitleText"
+            android:layout_below="@+id/sendTitleText"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/receiveTitleText"
+            android:layout_alignBaseline="@+id/receiveTitleText"
+            android:layout_alignStart="@+id/sendText"
+            android:layout_alignLeft="@+id/sendText"
+            android:text="받는 금액"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/receiveText"/>
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/okBtn"
+            android:layout_marginTop="30dp"
+            android:text="@string/ok"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</layout>

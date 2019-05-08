@@ -12,5 +12,7 @@ public class ExpandableActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expandable);
+
+        //Error inflating class com.andexert.expandablelayout.library.ExpandableLayout
     }
 }

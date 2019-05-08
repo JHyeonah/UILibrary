@@ -3,8 +3,7 @@
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="50dp"
-        android:gravity="center_vertical">
+        android:padding="50dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -15,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@id/sendText"
+            android:layout_below="@+id/sendText"
             android:layout_marginTop="10dp"
             android:id="@+id/sendLayout">
             <com.rengwuxian.materialedittext.MaterialEditText
@@ -23,6 +22,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:id="@+id/sendEt"
+                android:inputType="number"
                 android:layout_weight="2"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -36,19 +36,20 @@
             android:layout_height="wrap_content"
             android:id="@+id/receiveText"
             android:text="@string/receive_money"
-            android:layout_below="@id/sendLayout"
+            android:layout_below="@+id/sendLayout"
             android:layout_marginTop="50dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@id/receiveText"
+            android:layout_below="@+id/receiveText"
             android:layout_marginTop="10dp">
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/receiveEt"
                 android:textSize="20sp"
+                android:inputType="number"
                 android:layout_weight="2"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -56,5 +57,27 @@
                 android:text="PHP"
                 android:textSize="20sp"/>
         </LinearLayout>
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/okBtn"
+            android:layout_marginTop="30dp"
+            android:text="@string/ok"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"/>
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelBtn"
+            android:layout_marginTop="30dp"
+            android:text="@string/cancel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorCancel"/>
     </RelativeLayout>
 </layout>
