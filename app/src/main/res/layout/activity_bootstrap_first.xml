@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -7,77 +8,94 @@
         <RelativeLayout
             xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="30dp">
+            android:padding="30dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
 
 
-            <TextView
+            <com.beardedhen.androidbootstrap.AwesomeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/national"
-                android:textColor="#000000"
+                android:textColor="@color/colorPrimary"
                 android:id="@+id/nationText"/>
 
-            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            <com.beardedhen.androidbootstrap.BootstrapDropDown
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="선택.."
-                android:layout_below="@+id/nationText"
-                android:textColorHint="#05ab9a"
                 android:layout_marginTop="5dp"
+                android:layout_below="@id/nationText"
+                app:showOutline="true"
+                app:bootstrapSize="lg"
+                app:dropdownResource="@array/spinner_nation"
+                app:roundedCorners="true"
+                app:bootstrapBrand="primary"
+                app:bootstrapText=" "
                 android:id="@+id/nationSpinner"/>
 
-            <TextView
+            <com.beardedhen.androidbootstrap.AwesomeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/howto_send"
-                android:textColor="#000000"
                 android:id="@+id/howtoSendText"
                 android:layout_marginTop="15dp"
                 android:layout_below="@+id/nationSpinner"/>
 
-            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            <com.beardedhen.androidbootstrap.BootstrapDropDown
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/howtoSendText"
-                android:textColorHint="#05ab9a"
                 android:layout_marginTop="5dp"
+                android:layout_below="@+id/howtoSendText"
+                app:showOutline="true"
+                app:dropdownResource="@array/spinner_howto"
+                app:bootstrapSize="lg"
+                app:bootstrapBrand="primary"
+                app:bootstrapText=" "
+                app:roundedCorners="true"
                 android:id="@+id/howtoSpinner"/>
 
-            <TextView
+            <com.beardedhen.androidbootstrap.AwesomeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bank"
-                android:textColor="#000000"
                 android:id="@+id/bankText"
                 android:layout_marginTop="15dp"
                 android:layout_below="@+id/howtoSpinner"/>
 
-            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            <com.beardedhen.androidbootstrap.BootstrapDropDown
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bankText"
-                android:textColorHint="#05ab9a"
                 android:layout_marginTop="5dp"
+                app:showOutline="true"
+                app:dropdownResource="@array/spinner_bank"
+                app:bootstrapSize="lg"
+                app:bootstrapBrand="primary"
+                app:bootstrapText=" "
+                app:roundedCorners="true"
                 android:id="@+id/bankSpinner"/>
 
-            <TextView
+            <com.beardedhen.androidbootstrap.AwesomeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/account"
-                android:textColor="#000000"
                 android:id="@+id/accountText"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:layout_below="@+id/bankSpinner"/>
-            <com.rengwuxian.materialedittext.MaterialEditText
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/accountText"
                 android:inputType="number"
                 android:layout_marginTop="10dp"
                 android:hint="@string/account"
+                app:roundedCorners="true"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
                 android:id="@+id/accountEt"/>
 
-            <TextView
+            <com.beardedhen.androidbootstrap.AwesomeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/name"
@@ -85,15 +103,18 @@
                 android:id="@+id/nameText"
                 android:layout_marginTop="15dp"
                 android:layout_below="@+id/accountEt"/>
-            <com.rengwuxian.materialedittext.MaterialEditText
+            <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nameText"
                 android:layout_marginTop="10dp"
                 android:hint="영문 성명"
+                app:roundedCorners="true"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
                 android:id="@+id/nameEt"/>
 
-            <TextView
+            <com.beardedhen.androidbootstrap.AwesomeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phone_number"
@@ -101,16 +122,19 @@
                 android:id="@+id/numberText"
                 android:layout_marginTop="15dp"
                 android:layout_below="@+id/nameEt"/>
-            <com.rengwuxian.materialedittext.MaterialEditText
+            <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/numberText"
                 android:layout_marginTop="10dp"
                 android:hint="@string/phone_number"
                 android:inputType="number"
+                app:roundedCorners="true"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
                 android:id="@+id/numberEt"/>
 
-            <TextView
+            <com.beardedhen.androidbootstrap.AwesomeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/email"
@@ -118,34 +142,41 @@
                 android:id="@+id/emailText"
                 android:layout_marginTop="15dp"
                 android:layout_below="@+id/numberEt"/>
-            <com.rengwuxian.materialedittext.MaterialEditText
+            <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/emailText"
                 android:layout_marginTop="10dp"
                 android:inputType="textEmailAddress"
                 android:hint="@string/email"
+                app:roundedCorners="true"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
                 android:id="@+id/emailEt"/>
 
-            <com.gc.materialdesign.views.ButtonFlat
+            <com.beardedhen.androidbootstrap.BootstrapButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/okBtn"
                 android:layout_below="@+id/emailEt"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/ok"
                 android:layout_alignParentRight="true"
-                android:background="@color/colorPrimary"/>
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true"/>
 
-            <com.gc.materialdesign.views.ButtonFlat
+            <com.beardedhen.androidbootstrap.BootstrapButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/cancelBtn"
                 android:layout_below="@+id/emailEt"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/cancel"
                 android:layout_alignParentLeft="true"
-                android:background="@color/colorCancel"/>
+                app:bootstrapBrand="danger"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true"/>
         </RelativeLayout>
     </ScrollView>
 

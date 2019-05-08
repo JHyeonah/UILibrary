@@ -3,26 +3,21 @@ package com.coinshot.uilibrary2;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
-import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Toast;
 
-import com.coinshot.uilibrary2.databinding.ActivityMaterialSecondBinding;
+import com.coinshot.uilibrary2.databinding.ActivityBootstrapSecondBinding;
 
-public class MaterialSecondActivity extends AppCompatActivity {
-    ActivityMaterialSecondBinding binding;
+public class BootstrapSecondActivity extends AppCompatActivity {
+    ActivityBootstrapSecondBinding binding;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_material_second);
-
-        binding.sendEt.setText("0");
-        binding.receiveEt.setText("0");
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_bootstrap_second);
 
         binding.sendEt.addTextChangedListener(textWatcher);
         binding.receiveEt.addTextChangedListener(textWatcher);
@@ -33,21 +28,22 @@ public class MaterialSecondActivity extends AppCompatActivity {
                 int i = Integer.parseInt(binding.sendEt.getText().toString());
                 float f = Float.parseFloat(binding.receiveEt.getText().toString());
 
-                if (i < 30000 || i > 3000000) {
+                if(i < 30000 || i > 3000000){
                     binding.sendEt.setError("송금 가능 금액은 3만~300만 KRW 입니다");
                     binding.receiveEt.setError("송금 가능 금액은 1000 ~ 90,000 PHP 입니다");
-                } else if (f < 1000 || f > 90000) {
+                }else if(f < 1000 || f > 90000){
                     binding.receiveEt.setError("송금 가능 금액은 1000 ~ 90,000 PHP 입니다");
-                } else {
-                    SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                }else{
+                    SharedPreferences pref = getSharedPreferences("prefBoot", MODE_PRIVATE);
                     SharedPreferences.Editor editor = pref.edit();
                     editor.putString("send", binding.sendEt.getText().toString());
                     editor.putString("receive", binding.receiveEt.getText().toString());
                     editor.apply();
 
-                    Intent intent = new Intent(getApplicationContext(), MaterialThirdActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), BootstrapThirdActivity.class);
                     startActivity(intent);
                 }
+
             }
         });
 
@@ -57,6 +53,7 @@ public class MaterialSecondActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 
     TextWatcher textWatcher = new TextWatcher() {
@@ -83,7 +80,6 @@ public class MaterialSecondActivity extends AppCompatActivity {
                     binding.receiveEt.addTextChangedListener(textWatcher);
 
                 }else if(binding.receiveEt.isFocused()){
-
                     binding.sendEt.removeTextChangedListener(textWatcher);
                     if(!s.toString().equals("")){
                         float change = Float.parseFloat(s.toString()) * 22;

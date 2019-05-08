@@ -27,19 +27,22 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.materialBtn:
                         intent = new Intent(getApplicationContext(), MaterialFirstActivity.class);
                         break;
+                    case R.id.bootstrapBtn:
+                        intent = new Intent(getApplicationContext(), BootstrapFirstActivity.class);
+                        break;
                     case R.id.datePickerBtn:
                         intent = new Intent(getApplicationContext(), DatePickerActivity.class);
                         break;
                     case R.id.expandableBtn:
                         intent = new Intent(getApplicationContext(), ExpandableActivity.class);
                         break;
-
                 }
                 startActivity(intent);
             }
         };
 
         binding.materialBtn.setOnClickListener(ocListener);
+        binding.bootstrapBtn.setOnClickListener(ocListener);
         binding.datePickerBtn.setOnClickListener(ocListener);
         binding.expandableBtn.setOnClickListener(ocListener);
 

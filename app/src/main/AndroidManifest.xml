@@ -18,13 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ExpandableActivity"/>
+        <activity android:name=".ExpandableActivity"></activity>
         <activity android:name=".DatePickerActivity"/>
         <activity android:name=".MaterialFirstActivity"/>
         <activity android:name=".MaterialSecondActivity">
 
         </activity>
         <activity android:name=".MaterialThirdActivity"/>
+        <activity android:name=".BootstrapFirstActivity"/>
+        <activity android:name=".BootstrapSecondActivity"/>
+        <activity android:name=".BootstrapThirdActivity"/>
     </application>
 
 </manifest>

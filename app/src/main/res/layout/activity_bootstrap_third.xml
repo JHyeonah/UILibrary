@@ -5,12 +5,12 @@
         android:layout_height="match_parent"
         android:padding="50dp">
 
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/national"
             android:id="@+id/nationTitleText"/>
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/accountText"
@@ -21,14 +21,14 @@
             android:textStyle="bold"
             android:id="@+id/nationText"/>
 
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bank"
             android:id="@+id/bankTitleText"
             android:layout_below="@+id/nationTitleText"
             android:layout_marginTop="20dp"/>
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/bankTitleText"
@@ -39,14 +39,14 @@
             android:textStyle="bold"
             android:id="@+id/bankText"/>
 
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account"
             android:id="@+id/accountTitleText"
             android:layout_below="@+id/bankTitleText"
             android:layout_marginTop="20dp"/>
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/sendText"
@@ -56,14 +56,14 @@
             android:textStyle="bold"
             android:id="@+id/accountText"/>
 
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name"
             android:id="@+id/nameTitleText"
             android:layout_below="@+id/accountTitleText"
             android:layout_marginTop="20dp"/>
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/nameTitleText"
@@ -74,14 +74,14 @@
             android:textStyle="bold"
             android:id="@+id/nameText"/>
 
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/send_money"
             android:id="@+id/sendTitleText"
             android:layout_below="@+id/nameTitleText"
             android:layout_marginTop="20dp"/>
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/sendTitleText"
@@ -89,16 +89,16 @@
             android:layout_marginLeft="20dp"
             android:text="보내는 금액"
             android:textStyle="bold"
-            android:id="@+id/sendText"
-            android:textColor="@color/colorPrimary"/>
-        <TextView
+            app:bootstrapBrand="primary"
+            android:id="@+id/sendText" />
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/receive_money"
             android:id="@+id/receiveTitleText"
             android:layout_below="@+id/sendTitleText"
             android:layout_marginTop="20dp"/>
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/receiveTitleText"
@@ -107,17 +107,20 @@
             android:layout_alignLeft="@+id/sendText"
             android:text="받는 금액"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
+            app:bootstrapBrand="primary"
             android:id="@+id/receiveText"/>
 
-        <com.gc.materialdesign.views.ButtonFlat
+        <com.beardedhen.androidbootstrap.BootstrapButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/okBtn"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:text="@string/ok"
             android:layout_alignParentRight="true"
-            android:background="@color/colorPrimary"
-            android:layout_alignParentBottom="true" />
+            android:layout_alignParentBottom="true"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            app:roundedCorners="true"/>
+
     </RelativeLayout>
 </layout>

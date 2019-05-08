@@ -5,7 +5,7 @@
         android:layout_height="match_parent"
         android:padding="50dp">
 
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sendText"
@@ -17,68 +17,77 @@
             android:layout_below="@+id/sendText"
             android:layout_marginTop="10dp"
             android:id="@+id/sendLayout">
-            <com.rengwuxian.materialedittext.MaterialEditText
+            <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:id="@+id/sendEt"
                 android:inputType="number"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true"
                 android:layout_weight="2"/>
-            <TextView
+            <com.beardedhen.androidbootstrap.AwesomeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="KRW"
+                android:layout_marginLeft="10dp"
                 android:textSize="20sp"/>
         </LinearLayout>
 
-        <TextView
+        <com.beardedhen.androidbootstrap.AwesomeTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/receiveText"
             android:text="@string/receive_money"
             android:layout_below="@+id/sendLayout"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="50dp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_below="@+id/receiveText"
             android:layout_marginTop="10dp">
-            <com.rengwuxian.materialedittext.MaterialEditText
+            <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/receiveEt"
                 android:textSize="20sp"
                 android:inputType="number"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true"
                 android:layout_weight="2"/>
-            <TextView
+            <com.beardedhen.androidbootstrap.AwesomeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:text="PHP"
                 android:textSize="20sp"/>
         </LinearLayout>
 
-        <com.gc.materialdesign.views.ButtonFlat
+        <com.beardedhen.androidbootstrap.BootstrapButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/okBtn"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:text="@string/ok"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimary"/>
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            app:roundedCorners="true"/>
 
-
-        <com.gc.materialdesign.views.ButtonFlat
+        <com.beardedhen.androidbootstrap.BootstrapButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cancelBtn"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:text="@string/cancel"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorCancel"/>
+            app:bootstrapBrand="danger"
+            app:bootstrapSize="lg"
+            app:roundedCorners="true"/>
     </RelativeLayout>
 </layout>
