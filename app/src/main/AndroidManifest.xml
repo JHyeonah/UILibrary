@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,13 +22,12 @@
         <activity android:name=".ExpandableActivity"></activity>
         <activity android:name=".DatePickerActivity"/>
         <activity android:name=".MaterialFirstActivity"/>
-        <activity android:name=".MaterialSecondActivity">
-
-        </activity>
+        <activity android:name=".MaterialSecondActivity"/>
         <activity android:name=".MaterialThirdActivity"/>
         <activity android:name=".BootstrapFirstActivity"/>
         <activity android:name=".BootstrapSecondActivity"/>
         <activity android:name=".BootstrapThirdActivity"/>
+        <activity android:name=".CircleIndicatorActivity"/>
         <activity android:name=".SmarttabActivity"/>
     </application>
 
