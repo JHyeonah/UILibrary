@@ -42,4 +42,5 @@ dependencies {
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
     implementation 'com.github.navasmdc:MaterialDesign:1.5@aar'
     implementation 'com.beardedhen:androidbootstrap:2.3.2'
+    implementation 'com.ogaclejapan.smarttablayout:library:1.7.0@aar'
 }

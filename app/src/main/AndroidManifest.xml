@@ -28,6 +28,7 @@
         <activity android:name=".BootstrapFirstActivity"/>
         <activity android:name=".BootstrapSecondActivity"/>
         <activity android:name=".BootstrapThirdActivity"/>
+        <activity android:name=".SmarttabActivity"/>
     </application>
 
 </manifest>

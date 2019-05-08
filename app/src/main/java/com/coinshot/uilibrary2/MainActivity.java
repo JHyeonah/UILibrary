@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.expandableBtn:
                         intent = new Intent(getApplicationContext(), ExpandableActivity.class);
                         break;
+                    case R.id.smartTabBtn:
+                        intent = new Intent(getApplicationContext(), SmarttabActivity.class);
+                        break;
                 }
                 startActivity(intent);
             }
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         binding.bootstrapBtn.setOnClickListener(ocListener);
         binding.datePickerBtn.setOnClickListener(ocListener);
         binding.expandableBtn.setOnClickListener(ocListener);
+        binding.smartTabBtn.setOnClickListener(ocListener);
 
     }
 }
