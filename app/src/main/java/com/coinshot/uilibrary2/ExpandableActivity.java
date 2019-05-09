@@ -4,23 +4,44 @@ package com.coinshot.uilibrary2;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
-import com.andexert.expandablelayout.library.ExpandableLayout;
-import com.andexert.expandablelayout.library.ExpandableLayoutItem;
-import com.andexert.expandablelayout.library.ExpandableLayoutListView;
+import net.cachapa.expandablelayout.ExpandableLayout;
+
 
 public class ExpandableActivity extends Activity {
+
+   ExpandableLayout layout;
+   TextView text;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expandable);
 
-        //Error inflating class com.andexert.expandablelayout.library.ExpandableLayout
+        layout = findViewById(R.id.expandableLayout);
+        text = findViewById(R.id.textView);
+
+        layout.collapse();
+
+        layout.setOnExpansionUpdateListener(new ExpandableLayout.OnExpansionUpdateListener() {
+            @Override
+            public void onExpansionUpdate(float expansionFraction, int state) {
+                Log.d("LAYOUT", "layout");
+            }
+        });
+
+        text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(layout.isExpanded()){
+                    layout.collapse();
+                }else{
+                    layout.expand();
+                }
+            }
+        });
     }
 }

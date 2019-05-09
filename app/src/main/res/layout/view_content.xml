@@ -5,10 +5,10 @@
     android:padding="15dp"
     android:background="@color/colorPrimaryDark">
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="EditText"
+        android:text="Text"
         android:gravity="center_horizontal"
         android:id="@+id/et"/>
     <Button

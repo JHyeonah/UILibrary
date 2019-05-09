@@ -23,6 +23,7 @@ public class CircleIndicatorActivity extends AppCompatActivity {
         adapter.add("", new PagetwoFragment());
         adapter.add("", new PagethreeFragment());
 
-        //binding
+        binding.viewPager.setAdapter(adapter);
+        binding.indicator.setViewPager(binding.viewPager);
     }
 }

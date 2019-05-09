@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.coinshot.uilibrary2.databinding.ActivityMainBinding;
 
+import me.relex.circleindicator.CircleIndicator;
+
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
@@ -36,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.expandableBtn:
                         intent = new Intent(getApplicationContext(), ExpandableActivity.class);
                         break;
+                    case R.id.indicatorBtn:
+                        intent = new Intent(getApplicationContext(), CircleIndicatorActivity.class);
+                        break;
                     case R.id.smartTabBtn:
                         intent = new Intent(getApplicationContext(), SmarttabActivity.class);
                         break;
@@ -48,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         binding.bootstrapBtn.setOnClickListener(ocListener);
         binding.datePickerBtn.setOnClickListener(ocListener);
         binding.expandableBtn.setOnClickListener(ocListener);
+        binding.indicatorBtn.setOnClickListener(ocListener);
         binding.smartTabBtn.setOnClickListener(ocListener);
 
     }
